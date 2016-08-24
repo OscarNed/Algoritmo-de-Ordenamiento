@@ -8,16 +8,16 @@ import java.util.Scanner;
 
 public class Algoritmo {
     public static void Ordenamiento1(int [] array){
-        for (int i = 0; i < (array.length-1); i++){
+        for (int i = 0; i < (array.length-1); i++){ //Este es el ciclo para la posición de la izquierda.
             int m = i; //Este es el apuntador.
-            for (int j = i + 1; (j < array.length); j++){
-                if (array [j] < array [m]){
+            for (int j = i + 1; (j < array.length); j++){ //Este es el ciclo para la posición de la derecha.
+                if (array [j] < array [m]){ //Si j es menor a m, el valor de j se guarda en m para después cambiarlo de posición.
                    m = j;
                 }
             }
-        int aux = array[i];
-        array[i]=array[m];
-        array[m] = aux;
+        int aux = array[i]; //El auxiliar guarda el número en la posición i del arreglo, para así poder hacer el cambio de orden sin eliminar ningún número.
+        array[i]=array[m]; //El número en la posición i pasa a ser el que se guardó en m.
+        array[m] = aux; //El número en la posición m pasa a ser el que se guardó en el auxiliar, completando así el intercambio (swap).
         }
     }
    
